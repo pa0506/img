@@ -3,10 +3,10 @@ import wave
 
 r = sr.Recognizer()
 
-with wave.open("speech.wav", "rb") as f:
+with wave.open("audio1.wav", "rb") as f:
     duration = f.getnframes() / f.getframerate()
 
-with sr.AudioFile("speech.wav") as source:
+with sr.AudioFile("audio1.wav") as source:
     audio = r.record(source)
 
 print("Audio Duration:", round(duration, 2), "seconds")
