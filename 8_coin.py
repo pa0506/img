@@ -20,7 +20,6 @@ for cnt in c:
 
     if a > 5000:
         n += 1
-        x, y, w, h = cv2.boundingRect(cnt)
         cv2.drawContours(out, [cnt], -1, (0, 255, 0), 2)
         print("Coin", n, "Area:", int(a))
 
