@@ -4,18 +4,15 @@ import matplotlib.pyplot as plt
 
 img = cv2.imread("1_image.jpg", 0)
 
-# Smoothing filters
 avg = cv2.blur(img, (3, 3))
 gauss = cv2.GaussianBlur(img, (3, 3), 0)
 median = cv2.medianBlur(img, 3)
 
-# Sharpening filter
 kernel = np.array([[0, -1, 0],
                    [-1, 5, -1],
                    [0, -1, 0]])
 sharp = cv2.filter2D(img, -1, kernel)
 
-# Display images
 plt.figure(figsize=(8, 5))
 
 plt.subplot(231)
