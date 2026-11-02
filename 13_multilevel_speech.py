@@ -2,7 +2,7 @@ import librosa
 import numpy as np
 import matplotlib.pyplot as plt
 
-y, sr = librosa.load("speech.wav")
+y, sr = librosa.load("audio1.wav")
 y = np.clip(y, -1, 1)
 
 def quantize(y, L):
